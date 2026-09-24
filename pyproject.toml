@@ -1,0 +1,9 @@
+[project]
+name = "ragd-mcp"
+version = "0.1.0"
+description = "MCP adapter exposing ragd's RAG query endpoint as a Claude Code tool"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=2.2.0",
+]
