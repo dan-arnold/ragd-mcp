@@ -20,9 +20,15 @@ two protocols. It's a single tool, resolved automatically:
 
 ## Register with Claude Code
 
+Run from inside this repo:
+
 ```sh
-claude mcp add --transport stdio ragd --scope user -- uv run --project /home/dan/src/ragd-mcp main.py
+claude mcp add --transport stdio ragd --scope user -- uv run --project "$(pwd)" "$(pwd)/main.py"
 ```
+
+`--project` only sets the dependency-resolution root, not the working
+directory `uv run` resolves the script argument against, so the script
+path needs to be absolute.
 
 `--scope user` makes it available in every project on this machine, since
 ragd itself already scopes results per-repo. Verify with `claude mcp list`
