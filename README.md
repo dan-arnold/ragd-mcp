@@ -33,3 +33,7 @@ path needs to be absolute.
 `--scope user` makes it available in every project on this machine, since
 ragd itself already scopes results per-repo. Verify with `claude mcp list`
 or `/mcp` in a session.
+
+## License
+
+Apache-2.0. See [`LICENSE`](LICENSE).
